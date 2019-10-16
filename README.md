@@ -1,2 +1,2 @@
-## codigo : https://github.com/nunosantoswebdesigner/costa-landing
-## online : https://nunosantoswebdesigner.github.io/costa-landing/
+## codigo : https://github.com/joaocosta91/costa-landing
+## online : https://joaocosta91.github.io/costa-landing/
