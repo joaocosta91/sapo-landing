@@ -1,0 +1,270 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900);
+
+@import url('./animations.css');
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    background-color: #e5e5e5;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    a {
+        text-decoration: none;
+    }
+    nav {
+        position: absolute;
+        right: 0;
+        background: #000;
+        padding: 2em;
+        width: calc(78% - 4em);
+        height: calc(100vh - 4em);
+        display: none;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transform-origin: right;
+        transform-origin: right;
+        z-index: 9998;
+        
+        .close-button {
+           width: 45px;
+           float: right;
+           cursor: pointer;
+           opacity: 0
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 10% auto 0;
+            padding: 0;
+            width: 80%;
+            li {
+                opacity: 0;
+                padding: 1rem;
+            }
+            a {
+                color: #fff;
+                font-size: 1.9em;
+                text-transform: uppercase;
+            }
+        }
+    }
+    header {
+        padding: 2em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: absolute;
+        width: 100%;
+        box-sizing: border-box;
+        .logo {
+            width: 100%;
+            .logo-image {
+                max-width: 50px;
+            } 
+            .logo-title {
+                color: #fff;
+                font-weight: 700;
+                font-size: 2rem;
+                text-transform: uppercase;
+            }
+        }
+        .menu-btn {
+            width: 50px;
+            cursor: pointer;
+        }
+    }
+    
+    section {
+        padding: 4.5em 2em;
+        .section-title {
+            color: #666;
+            h1 {
+                margin: 1.2rem 0;
+            }
+            h3{
+                font-size: 2.1rem;
+                font-weight: 500;
+                width: 100%;
+                position: relative;
+                text-indent: 1.2rem;
+                padding-left: 1.2rem;
+                &:before {
+                    content: '';
+                    border-left: 6px solid #666;
+                    display: block;
+                    width: 100%;
+                    height: 104px;
+                    position: absolute;
+                    top: -70px;
+                }
+                &:after {
+                    content: '';
+                    background-image: url("../images/triangle-form.svg");
+                    background-repeat: no-repeat;
+                    display: block;
+                    width: 100%;
+                    height: 104px;
+                    position: absolute;
+                    left: 70%;
+                    top: -120px;
+                }
+            }
+        }
+        h1 {
+            font-size: 4em;
+            width: 100%;
+            text-transform: uppercase;
+            color: #000;
+            font-weight: 900;
+        }
+        &.hero-section {
+            background: url('../images/padron-bg.svg')  0 -240px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 75vh;
+            z-index: -9999;
+            display: flex;
+            flex-direction: column;
+
+            // simbolo do sapo
+            .sapo-simbol {
+
+            }
+            // figuras -cores
+            .color-figures {
+                position: relative;
+                width: 100%;
+                height: 60vh;
+                .color-figure-item  {
+                    position: absolute;
+                    &.square-one {
+                        top: 10%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                    &.triangle-one {
+                        top: 25%;
+                        right: 70%;
+                    }
+                    &.square-two {
+                        top: 60%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                    &.circle {
+                        bottom: 0;
+                        left: 0;
+                    }
+                    &.triangle-two {
+                        bottom: 0;
+                        right: 0;
+                    }
+                }
+            }
+            // botoes das cores
+            .color-buttons {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+                margin-top: 50px;
+                .my-button {
+                    width: 66px;
+                    height: 66px;
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+
+                    &.green {
+                        background-color: #33CC99;
+                    }
+                    &.blue {
+                        background-color: #3399CC;
+                    
+                    }
+                    &.orange {
+                        background-color: #FF9933;
+                    }
+                    &.current {
+                        height: 90px;
+                        width: 90px;
+                        outline: 1px solid #3399CC;
+                        outline-offset: 5px;
+                    }
+                }
+            }
+        }
+        &.brand-section {
+            .brand-section-head {
+                padding-top: 2em;
+            }
+            .brand-section-image {
+                display: flex;
+                background-color: #fff;
+                width: 90vw;
+                p{
+                    font-size: 1.8rem;
+                    color: #666;
+                    padding: 5vw;
+                }
+                img {
+                    width: 70px;
+                    margin: 30px 30px 30px 0px;
+                }
+            }
+            .brand-section-description {
+                p{
+                    font-weight: 300;
+                    font-size: 1.6rem;
+                    line-height: 2.6rem;
+                    padding: 5vw;
+                    color: #666;
+                }
+                .heighlight {
+                    background: #3399CC;
+                }
+            }
+            .brand-section-links {
+                display: flex;
+                flex-direction: column;
+                a {
+                    font-weight: 300;
+                    margin: 5vw;
+                    padding: 3vw 5vw;
+                    color: #ffffff;
+                    font-size: 1.4rem;
+                    background-image: -webkit-linear-gradient(218deg, #e5e5e5 18%, #7ABB00 0%);
+                }
+                a:nth-child(1) {
+                    background-image: -webkit-linear-gradient(136deg, #e5e5e5 40%, #5B8F22 0%);
+                }
+            }
+        }
+        &.game-section {
+            background-image: -webkit-linear-gradient(83deg, #fff 93%, transparent 50%);
+            .section-title {
+                padding-top: 6em;
+                h3 {
+                    &::after{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        background-image: -webkit-linear-gradient(-94deg, #fff 40%, #5B8F22 0%);
+        .social-links {
+            display: block;
+            width: 100%;
+            a {
+                img {
+                    max-width: 50px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,295 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900);
+@import url('animations.css');
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background-color: #e5e5e5;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
+html a,
+body a {
+  text-decoration: none;
+}
+html nav,
+body nav {
+  position: absolute;
+  right: 0;
+  background: #000;
+  padding: 2em;
+  width: calc(74%);
+  height: calc(96vh);
+  display: none;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: right;
+  transform-origin: right;
+  z-index: 9998;
+}
+html nav .close-button,
+body nav .close-button {
+  width: 45px;
+  float: right;
+  cursor: pointer;
+  opacity: 0;
+}
+html nav ul,
+body nav ul {
+  list-style-type: none;
+  margin: 10% auto 0;
+  padding: 0;
+  width: 80%;
+}
+html nav ul li,
+body nav ul li {
+  opacity: 0;
+  padding: 1rem;
+}
+html nav ul a,
+body nav ul a {
+  color: #fff;
+  font-size: 1.9em;
+  text-transform: uppercase;
+}
+html header,
+body header {
+  padding: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+}
+html header .logo,
+body header .logo {
+  width: 100%;
+}
+html header .logo .logo-image,
+body header .logo .logo-image {
+  max-width: 50px;
+}
+html header .logo .logo-title,
+body header .logo .logo-title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+html header .menu-btn,
+body header .menu-btn {
+  width: 50px;
+  cursor: pointer;
+}
+html section,
+body section {
+  padding: 4.5em 2em;
+}
+html section .section-title,
+body section .section-title {
+  color: #666;
+}
+html section .section-title h1,
+body section .section-title h1 {
+  margin: 1.2rem 0;
+}
+html section .section-title h3,
+body section .section-title h3 {
+  font-size: 2.1rem;
+  font-weight: 500;
+  width: 100%;
+  position: relative;
+  text-indent: 1.2rem;
+  padding-left: 1.2rem;
+}
+html section .section-title h3:before,
+body section .section-title h3:before {
+  content: '';
+  border-left: 6px solid #666;
+  display: block;
+  width: 100%;
+  height: 104px;
+  position: absolute;
+  top: -70px;
+}
+html section .section-title h3:after,
+body section .section-title h3:after {
+  content: '';
+  background-image: url("../images/triangle-form.svg");
+  background-repeat: no-repeat;
+  display: block;
+  width: 100%;
+  height: 104px;
+  position: absolute;
+  left: 70%;
+  top: -120px;
+}
+html section h1,
+body section h1 {
+  font-size: 4em;
+  width: 100%;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 900;
+}
+html section.hero-section,
+body section.hero-section {
+  background: url('../images/padron-bg.svg') 0 -240px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 75vh;
+  z-index: -9999;
+  display: flex;
+  flex-direction: column;
+}
+html section.hero-section .color-figures,
+body section.hero-section .color-figures {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+}
+html section.hero-section .color-figures .color-figure-item,
+body section.hero-section .color-figures .color-figure-item {
+  position: absolute;
+}
+html section.hero-section .color-figures .color-figure-item.square-one,
+body section.hero-section .color-figures .color-figure-item.square-one {
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+html section.hero-section .color-figures .color-figure-item.triangle-one,
+body section.hero-section .color-figures .color-figure-item.triangle-one {
+  top: 25%;
+  right: 70%;
+}
+html section.hero-section .color-figures .color-figure-item.square-two,
+body section.hero-section .color-figures .color-figure-item.square-two {
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+html section.hero-section .color-figures .color-figure-item.circle,
+body section.hero-section .color-figures .color-figure-item.circle {
+  bottom: 0;
+  left: 0;
+}
+html section.hero-section .color-figures .color-figure-item.triangle-two,
+body section.hero-section .color-figures .color-figure-item.triangle-two {
+  bottom: 0;
+  right: 0;
+}
+html section.hero-section .color-buttons,
+body section.hero-section .color-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-top: 50px;
+}
+html section.hero-section .color-buttons .my-button,
+body section.hero-section .color-buttons .my-button {
+  width: 66px;
+  height: 66px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+html section.hero-section .color-buttons .my-button.green,
+body section.hero-section .color-buttons .my-button.green {
+  background-color: #33CC99;
+}
+html section.hero-section .color-buttons .my-button.blue,
+body section.hero-section .color-buttons .my-button.blue {
+  background-color: #3399CC;
+}
+html section.hero-section .color-buttons .my-button.orange,
+body section.hero-section .color-buttons .my-button.orange {
+  background-color: #FF9933;
+}
+html section.hero-section .color-buttons .my-button.current,
+body section.hero-section .color-buttons .my-button.current {
+  height: 90px;
+  width: 90px;
+  outline: 1px solid #3399CC;
+  outline-offset: 5px;
+}
+html section.brand-section .brand-section-head,
+body section.brand-section .brand-section-head {
+  padding-top: 2em;
+}
+html section.brand-section .brand-section-image,
+body section.brand-section .brand-section-image {
+  display: flex;
+  background-color: #fff;
+  width: 90vw;
+}
+html section.brand-section .brand-section-image p,
+body section.brand-section .brand-section-image p {
+  font-size: 1.8rem;
+  color: #666;
+  padding: 5vw;
+}
+html section.brand-section .brand-section-image img,
+body section.brand-section .brand-section-image img {
+  width: 70px;
+  margin: 30px 30px 30px 0px;
+}
+html section.brand-section .brand-section-description p,
+body section.brand-section .brand-section-description p {
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  padding: 5vw;
+  color: #666;
+}
+html section.brand-section .brand-section-description .heighlight,
+body section.brand-section .brand-section-description .heighlight {
+  background: #3399CC;
+}
+html section.brand-section .brand-section-links,
+body section.brand-section .brand-section-links {
+  display: flex;
+  flex-direction: column;
+}
+html section.brand-section .brand-section-links a,
+body section.brand-section .brand-section-links a {
+  font-weight: 300;
+  margin: 5vw;
+  padding: 3vw 5vw;
+  color: #ffffff;
+  font-size: 1.4rem;
+  background-image: -webkit-linear-gradient(218deg, #e5e5e5 18%, #7ABB00 0%);
+}
+html section.brand-section .brand-section-links a:nth-child(1),
+body section.brand-section .brand-section-links a:nth-child(1) {
+  background-image: -webkit-linear-gradient(136deg, #e5e5e5 40%, #5B8F22 0%);
+}
+html section.game-section,
+body section.game-section {
+  background-image: -webkit-linear-gradient(83deg, #fff 93%, transparent 50%);
+}
+html section.game-section .section-title,
+body section.game-section .section-title {
+  padding-top: 6em;
+}
+html section.game-section .section-title h3::after,
+body section.game-section .section-title h3::after {
+  display: none;
+}
+html footer,
+body footer {
+  background-image: -webkit-linear-gradient(-94deg, #fff 40%, #5B8F22 0%);
+}
+html footer .social-links,
+body footer .social-links {
+  display: block;
+  width: 100%;
+}
+html footer .social-links a img,
+body footer .social-links a img {
+  max-width: 50px;
+}
