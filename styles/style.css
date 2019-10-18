@@ -23,8 +23,10 @@ body nav {
   height: calc(96vh);
   display: none;
   -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: right;
+  -ms-transform-origin: right;
   transform-origin: right;
   z-index: 9998;
 }
@@ -56,20 +58,35 @@ body nav ul a {
 html header,
 body header {
   padding: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   position: absolute;
   width: 100%;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 html header .logo,
 body header .logo {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 html header .logo .logo-image,
 body header .logo .logo-image {
-  max-width: 50px;
+  max-width: 60px;
+  padding: 0.2rem;
 }
 html header .logo .logo-title,
 body header .logo .logo-title {
@@ -93,7 +110,7 @@ body section .section-title {
 }
 html section .section-title h1,
 body section .section-title h1 {
-  margin: 1.2rem 0;
+  margin: 1rem 0;
 }
 html section .section-title h3,
 body section .section-title h3 {
@@ -102,7 +119,7 @@ body section .section-title h3 {
   width: 100%;
   position: relative;
   text-indent: 1.2rem;
-  padding-left: 1.2rem;
+  padding-left: 2.5rem;
 }
 html section .section-title h3:before,
 body section .section-title h3:before {
@@ -123,7 +140,7 @@ body section .section-title h3:after {
   width: 100%;
   height: 104px;
   position: absolute;
-  left: 70%;
+  left: 50%;
   top: -120px;
 }
 html section h1,
@@ -141,7 +158,12 @@ body section.hero-section {
   background-size: cover;
   min-height: 75vh;
   z-index: -9999;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 html section.hero-section .color-figures,
@@ -158,6 +180,8 @@ html section.hero-section .color-figures .color-figure-item.square-one,
 body section.hero-section .color-figures .color-figure-item.square-one {
   top: 10%;
   left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 html section.hero-section .color-figures .color-figure-item.triangle-one,
@@ -169,6 +193,8 @@ html section.hero-section .color-figures .color-figure-item.square-two,
 body section.hero-section .color-figures .color-figure-item.square-two {
   top: 60%;
   left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 html section.hero-section .color-figures .color-figure-item.circle,
@@ -183,9 +209,17 @@ body section.hero-section .color-figures .color-figure-item.triangle-two {
 }
 html section.hero-section .color-buttons,
 body section.hero-section .color-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 100%;
   margin-top: 50px;
@@ -223,6 +257,8 @@ body section.brand-section .brand-section-head {
 }
 html section.brand-section .brand-section-image,
 body section.brand-section .brand-section-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: #fff;
   width: 90vw;
@@ -238,27 +274,59 @@ body section.brand-section .brand-section-image img {
   width: 70px;
   margin: 30px 30px 30px 0px;
 }
+html section.brand-section .brand-section-description,
+body section.brand-section .brand-section-description {
+  position: relative;
+}
+html section.brand-section .brand-section-description:before,
+body section.brand-section .brand-section-description:before {
+  content: '';
+  display: block;
+  min-width: 320px;
+  min-height: 320px;
+  border: 6px dashed #3399CC;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  z-index: 0;
+}
 html section.brand-section .brand-section-description p,
 body section.brand-section .brand-section-description p {
   font-weight: 300;
   font-size: 1.6rem;
-  line-height: 2.6rem;
-  padding: 5vw;
+  line-height: 2.8rem;
+  padding: 6.5vw;
   color: #666;
+  position: relative;
 }
 html section.brand-section .brand-section-description .heighlight,
 body section.brand-section .brand-section-description .heighlight {
   background: #3399CC;
+  color: #fff;
+}
+html section.brand-section .brand-section-description #more,
+body section.brand-section .brand-section-description #more {
+  width: 3rem;
+  position: absolute;
+  bottom: 3%;
+  right: 0;
+  cursor: pointer;
 }
 html section.brand-section .brand-section-links,
 body section.brand-section .brand-section-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 html section.brand-section .brand-section-links a,
 body section.brand-section .brand-section-links a {
   font-weight: 300;
-  margin: 5vw;
+  margin: 0.5rem 5vw;
   padding: 3vw 5vw;
   color: #ffffff;
   font-size: 1.4rem;
@@ -272,6 +340,7 @@ html section.game-section,
 body section.game-section {
   background-image: -webkit-linear-gradient(83deg, #fff 93%, transparent 50%);
   padding: 4.5em 2em 0 2em;
+  padding-left: 0;
 }
 html section.game-section .section-title,
 body section.game-section .section-title {
@@ -280,6 +349,10 @@ body section.game-section .section-title {
 html section.game-section .section-title h3::after,
 body section.game-section .section-title h3::after {
   display: none;
+}
+html section.game-section .section-title h1,
+body section.game-section .section-title h1 {
+  padding: 0 0.5em;
 }
 html section.game-section .section-game .game-controls,
 body section.game-section .section-game .game-controls {
@@ -300,6 +373,22 @@ body section.game-section .section-game .game-controls input {
   font-size: 2.5rem;
   color: #000;
   margin-left: 10vw;
+}
+html section.game-section .section-game .game-controls input::-webkit-input-placeholder,
+body section.game-section .section-game .game-controls input::-webkit-input-placeholder {
+  color: #000;
+}
+html section.game-section .section-game .game-controls input::-moz-placeholder,
+body section.game-section .section-game .game-controls input::-moz-placeholder {
+  color: #000;
+}
+html section.game-section .section-game .game-controls input:-ms-input-placeholder,
+body section.game-section .section-game .game-controls input:-ms-input-placeholder {
+  color: #000;
+}
+html section.game-section .section-game .game-controls input::-ms-input-placeholder,
+body section.game-section .section-game .game-controls input::-ms-input-placeholder {
+  color: #000;
 }
 html section.game-section .section-game .game-controls input::placeholder,
 body section.game-section .section-game .game-controls input::placeholder {
@@ -326,20 +415,159 @@ body section.game-section .section-game .sapo-simbol {
   max-width: 40vw;
   padding: 40vw 0 0 40vw;
 }
-html footer,
-body footer {
-  background-image: -webkit-linear-gradient(-94deg, #fff 40%, #5B8F22 0%);
-  padding: 30vw 0 10vw 0;
-}
 html footer .social-links,
 body footer .social-links {
-  display: block;
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 350px;
+  background-image: -webkit-linear-gradient(-94deg, #fff 40%, #5B8F22 0%);
 }
 html footer .social-links img,
 body footer .social-links img {
-  margin: 0 auto;
-  display: block;
-  padding-top: 40vw;
-  padding-bottom: 10vw;
+  margin-bottom: 50px;
+}
+@media (min-width: 768px) {
+  body .sapo-simbol {
+    width: 60%;
+    margin: 0 20%;
+  }
+  body .color-figures {
+    width: 80% !important;
+    margin: 0 10%;
+    height: 50vh !important;
+  }
+  body section.brand-section .section-title h3:after {
+    top: -150px !important;
+  }
+  body section.brand-section .section-title h3:before {
+    left: 41% !important;
+  }
+  body section.brand-section .brand-section-head {
+    text-align: center !important;
+  }
+  body section.brand-section .brand-section-description {
+    width: 65%;
+  }
+  body section.brand-section .brand-section-description::before {
+    left: 80%;
+  }
+  body section.brand-section .brand-section-description p {
+    padding: 0 6.5vw;
+  }
+  body section.brand-section .brand-section-links {
+    margin-top: 70px;
+  }
+  body section.brand-section .brand-section-links a {
+    max-width: 300px;
+    padding: 2vw 2.5vw !important;
+  }
+  body section.game-section .section-game .game-controls {
+    padding: 3vw 0vw;
+  }
+  body section.game-section .section-game .game-controls a {
+    margin: 6vw 5vw 5vw 3vw;
+  }
+  body section.game-section .section-game .sapo-simbol {
+    max-width: 33vw;
+    padding: 15vw 0 0 20vw;
+  }
+  body section.game-section .section-game .dotted {
+    margin-top: -12vw;
+    margin-left: 4vw;
+  }
+}
+@media (min-width: 1200px) {
+  body header {
+    padding: 3rem 5em !important;
+  }
+  body .hero-section {
+    background: url(../images/padron-bg.svg) 0 -360px !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: reverse !important;
+    -ms-flex-direction: row-reverse !important;
+    flex-direction: row-reverse !important;
+    min-height: 90vh !important;
+  }
+  body .sapo-simbol {
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    width: 90%;
+    margin: 0 5%;
+  }
+  body .sapo-simbol img {
+    max-width: 550px !important;
+  }
+  body .color-figures {
+    max-width: 35vw !important;
+    min-height: 85vh !important;
+    -webkit-transform: translateX(-60%) rotate(68deg) !important;
+    -ms-transform: translateX(-60%) rotate(68deg) !important;
+    transform: translateX(-60%) rotate(68deg) !important;
+    position: absolute !important;
+    bottom: 30% !important;
+  }
+  body .color-buttons {
+    width: 80% !important;
+    margin: 0 10% !important;
+    -webkit-box-pack: space-evenly !important;
+    -ms-flex-pack: space-evenly !important;
+    justify-content: space-evenly !important;
+  }
+  body .color-buttons .my-button {
+    width: 96px !important;
+    height: 96px !important;
+  }
+  body .color-buttons .my-button.current {
+    height: 120px !important;
+    width: 120px !important;
+  }
+  body .brand-section-image {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: reverse !important;
+    -ms-flex-direction: row-reverse !important;
+    flex-direction: row-reverse !important;
+    -webkit-box-pack: center !important;
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+    background-color: transparent !important;
+  }
+  body .brand-section-image .image {
+    border: 100px solid #fff !important;
+    border-right-width: 250px !important;
+    margin-right: 250px !important;
+    z-index: 1 !important;
+  }
+  body .brand-section-image .image img {
+    min-width: 150px !important;
+    margin: 0 !important;
+  }
+  body .brand-section-description {
+    top: -31% !important;
+    margin-top: -440px !important;
+    width: 50% !important;
+    margin-left: 45% !important;
+  }
+  body .brand-section-description::before {
+    left: auto !important;
+    top: 35% !important;
+    right: 120% !important;
+    z-index: 0 !important;
+  }
+  body .brand-section-description p {
+    font-size: 2rem !important;
+    line-height: 2.8rem !important;
+    padding: 0 4.5vw !important;
+    z-index: 2 !important;
+  }
+  body .brand-section-links a {
+    margin: 2.5rem 0 2.5rem 0 !important;
+    padding: 1vw 5vw !important;
+    background-image: -webkit-linear-gradient(328deg, #e5e5e5 14%, #7ABB00 0%) !important;
+  }
+  body .brand-section-links a:first-child {
+    background-image: -webkit-linear-gradient(143deg, #e5e5e5 17%, #5B8F22 0%) !important;
+  }
 }

@@ -1,2 +1,2 @@
-## codigo : https://github.com/joaocosta91/costa-landing
-## online : https://joaocosta91.github.io/costa-landing/
+## codigo : https://github.com/joaocosta91/sapo-landing
+## online : https://joaocosta91.github.io/sapo-landing/

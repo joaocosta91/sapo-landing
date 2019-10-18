@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900);
 
 @import url('./animations.css');
+
 html,
 body {
     margin: 0;
@@ -9,9 +10,11 @@ body {
     background-color: #e5e5e5;
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
+
     a {
         text-decoration: none;
     }
+
     nav {
         position: absolute;
         right: 0;
@@ -21,16 +24,18 @@ body {
         height: calc(100vh - 4em);
         display: none;
         -webkit-transform: scaleX(0);
+        -ms-transform: scaleX(0);
         transform: scaleX(0);
         -webkit-transform-origin: right;
+        -ms-transform-origin: right;
         transform-origin: right;
         z-index: 9998;
-        
+
         .close-button {
-           width: 45px;
-           float: right;
-           cursor: pointer;
-           opacity: 0
+            width: 45px;
+            float: right;
+            cursor: pointer;
+            opacity: 0
         }
 
         ul {
@@ -38,10 +43,12 @@ body {
             margin: 10% auto 0;
             padding: 0;
             width: 80%;
+
             li {
                 opacity: 0;
                 padding: 1rem;
             }
+
             a {
                 color: #fff;
                 font-size: 1.9em;
@@ -49,19 +56,38 @@ body {
             }
         }
     }
+
     header {
         padding: 2em;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
         flex-direction: row;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
         position: absolute;
         width: 100%;
+        -webkit-box-sizing: border-box;
         box-sizing: border-box;
+
         .logo {
             width: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+
             .logo-image {
-                max-width: 50px;
-            } 
+                max-width: 60px;
+                padding: 0.2rem;
+            }
+
             .logo-title {
                 color: #fff;
                 font-weight: 700;
@@ -69,26 +95,31 @@ body {
                 text-transform: uppercase;
             }
         }
+
         .menu-btn {
             width: 50px;
             cursor: pointer;
         }
     }
-    
+
     section {
         padding: 4.5em 2em;
+
         .section-title {
             color: #666;
+
             h1 {
-                margin: 1.2rem 0;
+                margin: 1rem 0;
             }
-            h3{
+
+            h3 {
                 font-size: 2.1rem;
                 font-weight: 500;
                 width: 100%;
                 position: relative;
                 text-indent: 1.2rem;
-                padding-left: 1.2rem;
+                padding-left: 2.5rem;
+
                 &:before {
                     content: '';
                     border-left: 6px solid #666;
@@ -98,6 +129,7 @@ body {
                     position: absolute;
                     top: -70px;
                 }
+
                 &:after {
                     content: '';
                     background-image: url("../images/triangle-form.svg");
@@ -106,11 +138,12 @@ body {
                     width: 100%;
                     height: 104px;
                     position: absolute;
-                    left: 70%;
+                    left: 50%;
                     top: -120px;
                 }
             }
         }
+
         h1 {
             font-size: 4em;
             width: 100%;
@@ -118,58 +151,78 @@ body {
             color: #000;
             font-weight: 900;
         }
+
         &.hero-section {
-            background: url('../images/padron-bg.svg')  0 -240px;
+            background: url('../images/padron-bg.svg') 0 -240px;
             background-repeat: no-repeat;
             background-size: cover;
             min-height: 75vh;
             z-index: -9999;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
             flex-direction: column;
 
-            // simbolo do sapo
-            .sapo-simbol {
-                
-            }
-            // figuras -cores
             .color-figures {
                 position: relative;
                 width: 100%;
                 height: 60vh;
-                .color-figure-item  {
+
+                .color-figure-item {
                     position: absolute;
+
                     &.square-one {
                         top: 10%;
                         left: 50%;
+                        -webkit-transform: translateX(-50%);
+                        -ms-transform: translateX(-50%);
                         transform: translateX(-50%);
                     }
+
                     &.triangle-one {
                         top: 25%;
                         right: 70%;
                     }
+
                     &.square-two {
                         top: 60%;
                         left: 50%;
+                        -webkit-transform: translateX(-50%);
+                        -ms-transform: translateX(-50%);
                         transform: translateX(-50%);
                     }
+
                     &.circle {
                         bottom: 0;
                         left: 0;
                     }
+
                     &.triangle-two {
                         bottom: 0;
                         right: 0;
                     }
                 }
             }
-            // botoes das cores
+
             .color-buttons {
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: row;
                 flex-direction: row;
+                -ms-flex-pack: distribute;
                 justify-content: space-around;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
                 align-items: center;
                 width: 100%;
                 margin-top: 50px;
+
                 .my-button {
                     width: 66px;
                     height: 66px;
@@ -180,13 +233,16 @@ body {
                     &.green {
                         background-color: #33CC99;
                     }
+
                     &.blue {
                         background-color: #3399CC;
-                    
+
                     }
+
                     &.orange {
                         background-color: #FF9933;
                     }
+
                     &.current {
                         height: 90px;
                         width: 90px;
@@ -196,77 +252,121 @@ body {
                 }
             }
         }
+
         &.brand-section {
             .brand-section-head {
                 padding-top: 2em;
             }
+
             .brand-section-image {
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
                 background-color: #fff;
                 width: 90vw;
-                p{
+
+                p {
                     font-size: 1.8rem;
                     color: #666;
                     padding: 5vw;
                 }
+
                 img {
                     width: 70px;
                     margin: 30px 30px 30px 0px;
                 }
             }
+
             .brand-section-description {
-                p{
+                position: relative;
+
+                &:before {
+                    content: '';
+                    display: block;
+                    min-width: 320px;
+                    min-height: 320px;
+                    border: 6px dashed #3399CC;
+                    border-radius: 50%;
+                    position: absolute;
+                    left: 50%;
+                    top: 15%;
+                    z-index: 0;
+                }
+
+                p {
                     font-weight: 300;
                     font-size: 1.6rem;
-                    line-height: 2.6rem;
-                    padding: 5vw;
+                    line-height: 2.8rem;
+                    padding: 6.5vw;
                     color: #666;
+                    position: relative;
                 }
+
                 .heighlight {
                     background: #3399CC;
+                    color: #fff;
+                }
+
+                #more {
+                    width: 3rem;
+                    position: absolute;
+                    bottom: 3%;
+                    right: 0;
+                    cursor: pointer;
                 }
             }
+
             .brand-section-links {
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
                 flex-direction: column;
+
                 a {
                     font-weight: 300;
-                    margin: 5vw;
+                    margin: 0.5rem 5vw;
                     padding: 3vw 5vw;
                     color: #ffffff;
                     font-size: 1.4rem;
                     background-image: -webkit-linear-gradient(218deg, #e5e5e5 18%, #7ABB00 0%);
                 }
+
                 a:nth-child(1) {
                     background-image: -webkit-linear-gradient(136deg, #e5e5e5 40%, #5B8F22 0%);
                 }
             }
         }
 
-
-        // Costa Code
         &.game-section {
             background-image: -webkit-linear-gradient(83deg, #fff 93%, transparent 50%);
             padding: 4.5em 2em 0 2em;
+            padding-left: 0;
             .section-title {
                 padding-top: 6em;
+
                 h3 {
-                    &::after{
+                    &::after {
                         display: none;
                     }
                 }
+                h1{
+                    padding: 0 0.5em;
+                }
             }
-            .section-game{
-                //position: relative;
-                .game-controls{
-                   // position: absolute;
-                    width: 100%;  
+
+            .section-game {
+                .game-controls {
+                    width: 100%;
                     max-width: 511px;
-                    background-color: #CCCCCC;  
+                    background-color: #CCCCCC;
                     left: 0;
                     padding: 10vw;
-                    input{
-                        width:60%;
+
+                    input {
+                        width: 60%;
                         clear: both;
                         background: transparent;
                         border: none;
@@ -275,11 +375,29 @@ body {
                         font-size: 2.5rem;
                         color: #000;
                         margin-left: 10vw;
-                        &::placeholder{
+
+                        &::-webkit-input-placeholder {
+                            color: #000;
+                        }
+
+                        &::-moz-placeholder {
+                            color: #000;
+                        }
+
+                        &:-ms-input-placeholder {
+                            color: #000;
+                        }
+
+                        &::-ms-input-placeholder {
+                            color: #000;
+                        }
+
+                        &::placeholder {
                             color: #000;
                         }
                     }
-                    a{
+
+                    a {
                         display: block;
                         clear: both;
                         font-weight: 300;
@@ -290,30 +408,213 @@ body {
                         background-image: -webkit-linear-gradient(136deg, #ccc 40%, #7AB800 0%);
                     }
                 }
-                .dotted{
+
+                .dotted {
                     margin-top: -51vw;
                     margin-left: -26vw;
                 }
-                .sapo-simbol{
+
+                .sapo-simbol {
                     max-width: 40vw;
                     padding: 40vw 0 0 40vw;
                 }
             }
         }
-        // End - Costa Code
     }
 
+
     footer {
-        background-image: -webkit-linear-gradient(-94deg, #fff 40%, #5B8F22 0%);
-        padding: 30vw 0 10vw 0;
         .social-links {
-            display: block;
-            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            height: 350px;
+            background-image: -webkit-linear-gradient(-94deg, #fff 40%, #5B8F22 0%);
+            img{
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+   
+    body{
+        .sapo-simbol {
+            width: 60%;
+            margin: 0 20%;
+        }
+    
+        .color-figures {
+            width: 80% !important;
+            margin: 0 10%;
+            height: 50vh !important;
+        }
+        section.brand-section{
+            .section-title {
+                h3 {
+                    &:after {
+                        top: -150px !important;
+                    }
+        
+                    &:before {
+                        left: 41% !important;
+                    }
+                }
+            }
+    
+            .brand-section-head {
+                text-align: center !important;
+            }
+    
+            .brand-section-description {
+                width: 65%;
+                &::before{
+                    left: 80%;
+                }
+                p{
+                    padding: 0 6.5vw;
+                }
+            }
+        
+            .brand-section-links{
+                margin-top: 70px;
+                a {
+                    max-width: 300px;
+                    padding: 2vw 2.5vw !important;
+                }
+            }
+        }
+        section.game-section{
+            .section-game{
+                .game-controls{
+                    padding: 3vw 0vw;
+                    a{
+                        margin: 6vw 5vw 5vw 3vw;
+                    }
+                }
+                .sapo-simbol{
+                    max-width: 33vw;
+                    padding: 15vw 0 0 20vw;
+                }
+                .dotted{
+                    margin-top: -12vw;
+                    margin-left: 4vw;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    body{
+        header {
+            padding: 3rem 5em !important;
+        }
+    
+        .hero-section {
+            background: url(../images/padron-bg.svg) 0 -360px !important;
+            background-repeat: no-repeat !important;
+            background-size: cover !important;
+            -webkit-box-orient: horizontal !important;
+            -webkit-box-direction: reverse !important;
+            -ms-flex-direction: row-reverse !important;
+            flex-direction: row-reverse !important;
+            min-height: 90vh !important;
+        }
+    
+        .sapo-simbol {
+            -ms-flex-item-align: end;
+            align-self: flex-end;
+            width: 90%;
+            margin: 0 5%;
             img {
-                margin: 0 auto;
-                display: block;
-                padding-top: 40vw;
-                padding-bottom: 10vw;
+                max-width: 550px !important;
+            }
+        }
+    
+        .color-figures {
+            max-width: 35vw !important;
+            min-height: 85vh !important;
+            -webkit-transform: translateX(-60%) rotate(68deg) !important;
+            -ms-transform: translateX(-60%) rotate(68deg) !important;
+            transform: translateX(-60%) rotate(68deg) !important;
+            position: absolute !important;
+            bottom: 30% !important;
+        }
+    
+        .color-buttons {
+            width: 80% !important;
+            margin: 0 10% !important;
+            -webkit-box-pack: space-evenly !important;
+            -ms-flex-pack: space-evenly !important;
+            justify-content: space-evenly !important;
+    
+            .my-button {
+                width: 96px !important;
+                height: 96px !important;
+    
+                &.current {
+                    height: 120px !important;
+                    width: 120px !important;
+                }
+            }
+        }
+    
+        .brand-section-image {
+            -webkit-box-orient: horizontal !important;
+            -webkit-box-direction: reverse !important;
+            -ms-flex-direction: row-reverse !important;
+            flex-direction: row-reverse !important;
+            -webkit-box-pack: center !important;
+            -ms-flex-pack: center !important;
+            justify-content: center !important;
+            background-color: transparent !important;
+    
+            .image {
+                border: 100px solid #fff !important;
+                border-right-width: 250px !important;
+                margin-right: 250px !important;
+                z-index: 1 !important;
+    
+                img {
+                    min-width: 150px !important;
+                    margin: 0 !important;
+                }
+            }
+        }
+    
+        .brand-section-description {
+            top: -31% !important;
+            margin-top: -440px !important;
+            width: 50% !important;
+            margin-left: 45% !important;
+            &::before {
+                left: auto !important;
+                top: 35% !important;
+                right: 120% !important;
+                z-index: 0 !important;
+            }
+            
+            p {
+                font-size: 2rem !important;
+                line-height: 2.8rem !important;
+                padding: 0 4.5vw !important;
+                z-index: 2 !important;
+            }
+        }
+    
+        .brand-section-links {
+    
+    
+            a {
+                margin: 2.5rem 0 2.5rem 0 !important;
+                padding: 1vw 5vw !important;
+                background-image: -webkit-linear-gradient(328deg, #e5e5e5 14%, #7ABB00 0%) !important;
+    
+                &:first-child {
+                    background-image: -webkit-linear-gradient(143deg, #e5e5e5 17%, #5B8F22 0%) !important;
+                }
             }
         }
     }

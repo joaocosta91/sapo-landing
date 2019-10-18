@@ -43,5 +43,18 @@ $( document ).ready(function() {
         $('#square-two').css({ stroke: "#FF9933" });
         $('#triangle-two').css({ stroke: "#FF9933" });
     });
+
+    // Collapse text
+    $('.hidden-text').hide()
+    $('#more').on("click", function() {
+        $('.hidden-text').toggle();
+    });
+    
+    // Responsive handler
+    var windowSize = $(window).width()
+    if (windowSize >= 1200) {
+        $('.responsive-text').insertBefore('#responsive-text')
+        console.log(windowSize)
+    }
    
 });
