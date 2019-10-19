@@ -103,43 +103,24 @@ body {
     }
 
     section {
-        padding: 4.5em 2em;
+        padding: 3em 2em;
 
         .section-title {
             color: #666;
-
             h1 {
                 margin: 1rem 0;
             }
-
             h3 {
                 font-size: 2.1rem;
                 font-weight: 500;
                 width: 100%;
-                position: relative;
-                text-indent: 1.2rem;
-                padding-left: 2.5rem;
-
-                &:before {
-                    content: '';
+            }
+            .brand {
+                > div {
+                    height: 100px;
                     border-left: 6px solid #666;
-                    display: block;
-                    width: 100%;
-                    height: 104px;
-                    position: absolute;
-                    top: -70px;
-                }
-
-                &:after {
-                    content: '';
-                    background-image: url("../images/triangle-form.svg");
-                    background-repeat: no-repeat;
-                    display: block;
-                    width: 100%;
-                    height: 104px;
-                    position: absolute;
-                    left: 50%;
-                    top: -120px;
+                    padding-left: 20px;
+                    line-height: 170px;
                 }
             }
         }
@@ -254,8 +235,11 @@ body {
         }
 
         &.brand-section {
-            .brand-section-head {
-                padding-top: 2em;
+
+            .section-figures {
+                display: flex;
+                align-items: flex-end;
+                flex-direction: row-reverse;
             }
 
             .brand-section-image {
@@ -341,22 +325,6 @@ body {
         }
 
         &.game-section {
-            background-image: -webkit-linear-gradient(83deg, #fff 93%, transparent 50%);
-            padding: 4.5em 2em 0 2em;
-            padding-left: 0;
-            .section-title {
-                padding-top: 6em;
-
-                h3 {
-                    &::after {
-                        display: none;
-                    }
-                }
-                h1{
-                    padding: 0 0.5em;
-                }
-            }
-
             .section-game {
                 .game-controls {
                     width: 100%;
@@ -429,7 +397,7 @@ body {
             justify-content: center;
             align-items: flex-end;
             height: 350px;
-            background-image: -webkit-linear-gradient(-94deg, #fff 40%, #5B8F22 0%);
+            background-image: -webkit-linear-gradient(-94deg, #e5e5e5 40%, #5B8F22 0%);
             img{
                 margin-bottom: 50px;
             }
@@ -438,11 +406,13 @@ body {
 }
 
 @media (min-width: 768px) {
-   
     body{
+        section {
+            padding: 3.5em 2em;
+        }
         .sapo-simbol {
-            width: 60%;
-            margin: 0 20%;
+            width: 90%;
+            margin: 0 5%;
         }
     
         .color-figures {
@@ -450,39 +420,23 @@ body {
             margin: 0 10%;
             height: 50vh !important;
         }
-        section.brand-section{
-            .section-title {
-                h3 {
-                    &:after {
-                        top: -150px !important;
-                    }
-        
-                    &:before {
-                        left: 41% !important;
-                    }
-                }
+    
+        .brand-section-description {
+            width: 65%;
+            &:before{
+                left: 80%;
+            }
+            p{
+                padding: 0 6.5vw;
             }
     
-            .brand-section-head {
-                text-align: center !important;
-            }
+        }
     
-            .brand-section-description {
-                width: 65%;
-                &::before{
-                    left: 80%;
-                }
-                p{
-                    padding: 0 6.5vw;
-                }
-            }
-        
-            .brand-section-links{
-                margin-top: 70px;
-                a {
-                    max-width: 300px;
-                    padding: 2vw 2.5vw !important;
-                }
+        .brand-section-links {
+            margin-top: 70px;
+            a {
+                max-width: 300px;
+                padding: 2vw 2.5vw !important;
             }
         }
         section.game-section{
@@ -508,6 +462,10 @@ body {
 
 @media (min-width: 1200px) {
     body{
+        section {
+            padding: 0 2em;
+        }
+    
         header {
             padding: 3rem 5em !important;
         }
@@ -526,8 +484,7 @@ body {
         .sapo-simbol {
             -ms-flex-item-align: end;
             align-self: flex-end;
-            width: 90%;
-            margin: 0 5%;
+    
             img {
                 max-width: 550px !important;
             }
@@ -605,7 +562,15 @@ body {
         }
     
         .brand-section-links {
-    
+            -webkit-box-orient: horizontal !important;
+            -webkit-box-direction: normal !important;
+            -ms-flex-direction: row !important;
+            flex-direction: row !important;
+            -webkit-box-pack: start;
+            -ms-flex-pack: start;
+            justify-content: flex-start;
+            width: 50vw !important;
+            margin-left: 50vw !important;
     
             a {
                 margin: 2.5rem 0 2.5rem 0 !important;
@@ -617,5 +582,22 @@ body {
                 }
             }
         }
+        section.game-section{
+            .section-game{
+                .game-controls{
+                    width: 511px;
+                    padding: 50px 0;
+                    margin: 0 auto;
+                    input{
+                        margin-left: 120px;
+                    }
+                    a{
+                        margin: 40px 10px 0 40px;
+                        padding: 20px 50px;
+                    }
+                }
+            }
+        }
     }
+    
 }
